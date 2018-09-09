@@ -4,7 +4,7 @@
 	if(mysqli_connect_error()){
 		die("Ошибка подключения к базе данных");	
 	}
-	 
+	
 	$sucsessResult='';
 	$errorResult='';
 	$errors= array();
