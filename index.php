@@ -123,7 +123,7 @@ if ( @$_GET['action'] == 'delete') {
 					}
 				?>
 				<div class="form-group"><label class="label">Название фильма<input class="input mt-10" name="title" type="text" placeholder="Такси 2" /></label></div>
-				<div class="row">
+				<div class="row">   
 					<div class="col">
 						<div class="form-group"><label class="label">Жанр<input class="input mt-10" name="genre" type="text" placeholder="комедия" /></label></div>
 					</div>

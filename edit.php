@@ -112,9 +112,9 @@ if ( @$_GET['action'] == 'delete') {
 						<div class="form-group"><label class="label">Жанр<input class="input mt-10" name="genre" type="text" placeholder="комедия" value="<?php  echo($films['genre'])?>"/></label></div>
 					</div>
 					<div class="col">
-						<div class="form-group"><label class="label">Год<input class="input mt-10" name="year" type="text" placeholder="2000" value="<?php echo( $films['year'])?>"/></label></div>
+						<div class="form-group"><label class="label">Год<input class="input mt-10" name="year" type="text" placeholder="2000" value="<?php echo( $films['year'])?>"/></label></div>   
 					</div>
-				</div><input class="button" type="submit" name="updateFilm" value="Изменить информацию" />
+				</div><input class="button" type="submit" name="updateFilm" value="Изменить информацию" />   
 			</form>
 		</div>
 		<div class='ml20'><a href="index.php" class="button">Вернуться на главную </a></div>
