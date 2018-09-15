@@ -4,9 +4,6 @@
 	
 	$link= db_connect();
 	require('models/films.php');
-	$resultInfo="";
-	$sucsessResult='';
-	$errorResult='';
 
 	if ( @$_GET['action'] == 'delete') {
 	 $result = delete_film($link, $_GET['id']);
@@ -15,11 +12,16 @@
 		}	
 	}
 
-    $films = films_all($link);
+	$resultInfo="";
+	$sucsessResult='';
+	$errorResult='';
+	$errors='';
+
+	$film = get_film($link, $_GET['id']);
 
 	include('views/head.tpl');
-	include('views/notification.tpl');
-	include('views/index.tpl');
+    include('views/notification.tpl');
+	include('views/film-single.tpl');
 	include('views/footer.tpl');
 
 ?>
