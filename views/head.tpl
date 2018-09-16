@@ -21,5 +21,31 @@
 <div class="container user-content section-page mt-20">
 	<div class="admin-nav mt-20 mb-20">
 		<a href="index.php" class="admin-nav__link">Все фильмы</a>
-		<a href="new.php" class="admin-nav__link">Добавить новый фильм</a>
+				<?php  
+			if ( isset($_SESSION['user']) ) {
+				if ( $_SESSION['user'] == 'admin' ) { 
+		?>
+				<a href="new.php" class="admin-nav__link">Добавить новый фильм</a>
+		<?php  
+				} 
+			}
+		?>
+			<?php  if ( !isAdmin() ) { ?>
+			<a href="request.php" class="admin-nav__link">Указать информацию</a>
+			<a href="login.php" class="admin-nav__link">Вход для админинистратора</a>
+			<?php } ?>
+			<?php  if ( isAdmin() ) { ?>
+				<a href="logout.php" class="admin-nav__link">Выход</a>
+			<?php }  ?>
+		
 	</div>
+	<?php if (isset($_COOKIE['user-name'])){?>
+		<div>
+		<?php if (isset($_COOKIE['user-city'])){?>
+		<p>Привет, <?=$_COOKIE['user-name']?> из <?=$_COOKIE['user-city']?>!</p>
+     	<?php } else {?> 
+     	<p>Привет, <?=$_COOKIE['user-name']?></p>
+      <?php	}?>
+	     </div>
+	<?php }?>
+	

@@ -1,11 +1,11 @@
-	
 <?php
-	require('config.php');
+require('config.php');
 	require('database.php');
-	$link= db_connect();
 
+	$link= db_connect();
 	require('models/films.php');
-   	$films=get_film($link, $_GET['id']);
+	require('functions/login-functions.php');
+ 	$films=get_film($link, $_GET['id']);
 
 	$resultInfo="";
 	$sucsessResult='';

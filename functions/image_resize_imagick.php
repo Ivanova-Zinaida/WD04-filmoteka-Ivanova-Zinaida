@@ -7,12 +7,6 @@ function createThumbnail($imagePath, $cropWidth = 100, $cropHeight = 100){
 	$width = $imagick->getImageWidth();
 	$height = $imagick->getImageHeight();
 
-	// Изменение размера
-	// if ( $width > $height ) {
-	// 	$imagick->thumbnailImage(0, $cropHeight);
-	// } else {
-	// 	$imagick->thumbnailImage($cropWidth, 0);
-	// }
 
 	$imagick->thumbnailImage($cropWidth, $cropHeight);
 
@@ -39,21 +33,5 @@ function createThumbnail($imagePath, $cropWidth = 100, $cropHeight = 100){
 	return $imagick;
 }
 
-/* 
-
-Usage Example
-
-// Define full path to the image
-$imagePath = 'D:\OpenServer\domains\php-school-all\php-imagick\flat.jpg';
-
-// or with ROOT constant
-define('ROOT', dirname(__FILE__).'/');
-$imagePath = ROOT . 'flat.jpg';
-
-$img = createThumbnail($imagePath);
-header('Content-type: image/jpeg');
-echo $img;
-
-*/
 
 ?>

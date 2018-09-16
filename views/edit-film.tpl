@@ -1,14 +1,10 @@
-
-<div class="title-1">Фильм <?php echo($films['title']);?> </div>
-		
-		<div class="panel-holder mt-40 mb-20">
+<div class="panel-holder mt-40 mb-20">
 			<div class="title-3 mt-0">Редактировать фильм</div>
 			<form action="edit.php?id=<?=$films['id']?>" method="POST" enctype="multipart/form-data">
-			
 				<?php 	
 					if(!empty($errors)){
 						foreach ($errors as $key=> $value){
-							echo "	<div class='notify notify--error mb-20'>$value</div>";
+							echo "<div class='notify notify--error mb-20'>$value</div>";
 						}
 					}
 				?>

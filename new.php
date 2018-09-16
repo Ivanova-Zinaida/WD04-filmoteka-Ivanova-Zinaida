@@ -1,9 +1,11 @@
 <?php
 	require('config.php');
 	require('database.php');
+	
 	$link= db_connect();
 
 	require('models/films.php');
+	require('functions/login-functions.php');
     $films = films_all($link);
 
 	$resultInfo="";
@@ -37,7 +39,6 @@
 	include('views/head.tpl');
 	include('views/notification.tpl');
 	include('views/new-film.tpl');
-    
 	include('views/footer.tpl');
 ?>
 	
